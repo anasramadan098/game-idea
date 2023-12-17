@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+:root {
+    --main-color:#fff;
+    --sec-color:#000;
+}
+.body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+
+
+}
+form {
+    background: linear-gradient(153deg, #000 0%, #607D8B 100%);
+    padding: 100px 50px;
+}
+
+h1 {
+text-align: center;
+    font-size: 3em;
+    color: #FFC107;
+    font-weight: bold;
+}
+p {
+    text-align: center;
+    line-height: 2;
+    margin: 30px 0;
+    font-size: 1.5em;
+    color: #CDDC39;
+}
+input,
+textarea {
+    font-family: 'Tajawal', sans-serif;
+    display: block;
+    margin: auto;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #009688;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+textarea {
+    height: 300px;
+}
+button {
+    font-family: 'Tajawal', sans-serif;
+    padding: 15px 35px;
+    background: #009688;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px solid #673AB7;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+button:hover {
+    background-color: #673AB7;
+    border-color: #009688;
+}
+.text {
+    position: absolute;
+    z-index: 500;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 60px;
+}
+
+/* 
+ */
+
+ @keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+
+      .background-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        overflow: hidden;
+}
+
+.stars {
+ background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+ position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: block;
+  	z-index: 0;
+}
+
+.twinkling{
+	width:10000px;
+	height: 100%;
+	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+	background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    
+    -moz-animation:move-background 70s linear infinite;
+  -ms-animation:move-background 70s linear infinite;
+  -o-animation:move-background 70s linear infinite;
+  -webkit-animation:move-background 70s linear infinite;
+  animation:move-background 70s linear infinite;
+	
+}
+
+.clouds{
+	width:10000px;
+	height: 100%;
+	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+	background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+
+   -moz-animation:move-background 150s linear infinite;
+  -ms-animation:move-background 150s linear infinite;
+  -o-animation:move-background 150s linear infinite;
+  -webkit-animation:move-background 150s linear infinite;
+  animation:move-background 150s linear infinite;
+}
+img{
+  height: 70vh;
+  width:70vh;
+  position: absolute;
+  z-index: 3;
+  right: 20px;
+}
